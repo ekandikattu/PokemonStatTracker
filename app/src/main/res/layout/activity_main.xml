@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pokemon Stat Tracker"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/pokemonImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="75dp"
+        android:contentDescription="picture of current pokemon"
+        android:src="@drawable/pokeball"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HP:"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/hpNum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImage" />
+
+    <TextView
+        android:id="@+id/hpNum"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:text = ""
+        android:textSize="20sp"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/attack"
+        app:layout_constraintStart_toEndOf="@+id/hp"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImage" />
+
+    <TextView
+        android:id="@+id/attack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="ATTACK:"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/attackNum"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImage" />
+
+    <TextView
+        android:id="@+id/attackNum"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="38dp"
+        android:text = ""
+        android:textSize="20sp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/defense"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImage" />
+
+    <TextView
+        android:id="@+id/defense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"
+        android:text="DEFENSE:"
+        app:layout_constraintEnd_toStartOf="@+id/defenseNum"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImage" />
+
+    <TextView
+        android:id="@+id/defenseNum"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="38dp"
+        android:text = ""
+        android:textSize="20sp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImage" />
+
+    <TextView
+        android:id="@+id/specialAttack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:layout_marginStart="20dp"
+        android:text="SP ATTACK:"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/specialAttackNum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hp" />
+
+    <TextView
+        android:id="@+id/specialAttackNum"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="50dp"
+        android:text = ""
+        android:textSize="20sp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/specialDefense"
+        app:layout_constraintStart_toEndOf="@+id/specialAttack"
+        app:layout_constraintTop_toBottomOf="@+id/hpNum" />
+
+    <TextView
+        android:id="@+id/specialDefense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:text="SP DEFENSE:"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/attack"
+        app:layout_constraintEnd_toStartOf="@+id/specialDefenseNum"
+        tools:layout_editor_absoluteX="149dp" />
+
+    <TextView
+        android:id="@+id/specialDefenseNum"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="15dp"
+        android:text = ""
+        android:textSize="20sp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/speed"
+        app:layout_constraintHorizontal_bias="0.0"
+
+        app:layout_constraintTop_toBottomOf="@+id/attackNum" />
+
+    <TextView
+        android:id="@+id/speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:text="SPEED:"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/speedNum"
+        app:layout_constraintTop_toBottomOf="@+id/defense" />
+
+    <TextView
+        android:id="@+id/speedNum"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:text = ""
+        android:textSize="20sp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/defenseNum" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/pokemonImage"
+        app:layout_constraintStart_toStartOf="@+id/pokemonImage"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImage">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:hint="Enter a Pokemon Name (lowercase and spelled correctly!):"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/pokemonImage"
+        app:layout_constraintStart_toStartOf="@+id/pokemonImage"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImage" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:text="Search for Pokemon"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
